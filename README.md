@@ -229,3 +229,17 @@ npm run dev
 
 - `.env` **não deve ser versionado**. Use `.env.example` com placeholders.
 
+---
+
+## 11. Papéis e Permissões
+
+A aplicação distingue dois tipos de usuários com capacidades diferentes:
+
+### Admin
+- Pode gerenciar tudo: criar/editar/excluir formulários, perguntas e alternativas (exclusão lógica), ver todas as respostas históricas, gerenciar usuários e roles.
+- Atribuído via role `admin`.
+
+### Responder
+- Só pode responder formulários ativos e visualizar as respostas (por exemplo, as próprias ou conforme definidas pelas regras de negócio).
+- Não tem acesso ao CRUD de formulários, perguntas ou alternativas.
+- Atribuído via role `responder`.
